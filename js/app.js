@@ -59,7 +59,6 @@ $(document).ready(function(){
 				breakpoint: 992,
 				settings: {
 					centerMode: false,
-					arrows: false,
 				}
 			},
 		]

@@ -158,7 +158,11 @@ header nav ul li a::after{
 /*END HEADER*/
 
 
-#que-te-ofrecemos { margin-bottom: 25px; }
+#que-te-ofrecemos { 
+    margin-bottom: 25px;
+    padding-top: 40px;
+    padding-bottom: 15px;
+ }
     #que-te-ofrecemos h2 {
         font-size: 1.5rem;
         line-height: 24px;
@@ -186,7 +190,7 @@ header nav ul li a::after{
 	#que-te-ofrecemos .eqi-header__title {
 		font-size: 2rem;
 		font-weight: 400;
-		line-height: 3.1rem;
+		line-height: 2.8rem;
 		color: rgb(58, 58, 58);
 	}
 	#que-te-ofrecemos .eqi-content {
@@ -204,7 +208,7 @@ header nav ul li a::after{
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: 35px;
+		padding: 35px 15px;
 		background: var(--white);
 		border: 1px solid var(--grey-20);
 		box-sizing: border-box;
@@ -244,7 +248,7 @@ header nav ul li a::after{
 
 		#que-te-ofrecemos .eqi-container {
 			padding-top: 0;
-			padding-bottom: 48px;
+			padding-bottom: 20px;
 		}
 		#que-te-ofrecemos .eqi-header {
 			padding-top: 0;
@@ -291,15 +295,19 @@ header nav ul li a::after{
 /*TEXTO PRINCIPAL*/
 
 .banner-main{
-    min-height: 65vh;
-    max-height: 65vh;
+
     position: relative;
     background-size: cover;
     z-index: 0;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    background-image: url('../images/D_NQ_NP_680818-MLA48895326470_012022-OO.jpg');
+}
+.banner-main .main-image{
+    object-fit: cover;
+    background-position: no-repeat;
+    object-position: center;
+    height: 100%;
 }
 
 .banner-main .container-fluid{
@@ -401,6 +409,7 @@ header nav ul li a::after{
 }
 
 .banner .about-us p{
+    font-size: 1.2rem;
     line-height: 1.8rem;
 }
 .banner .about-us h4::after{
@@ -436,7 +445,7 @@ header nav ul li a::after{
     margin-top: 2.7rem;
     font-weight: 300;
     font-size: 1rem;
-    padding: 0 .6rem 0 0;
+    padding: 0 .7rem 0 0;
 }
 
 .banner .text-banner{
@@ -446,7 +455,7 @@ header nav ul li a::after{
 .btn.btn-effect{
     width: auto;
     border-radius: 0;
-    padding: .8rem 1.7rem;
+    padding: .6rem 1.7rem;
     padding-right: calc(2.5rem + 3.2rem);
     color: #fff;
     position: relative;
@@ -691,26 +700,24 @@ header nav ul li a::after{
 /*FOOTER*/
 
 footer{
-    color: #212121;
+    color: #666;
     background-color: #ebebeb;
     padding: 100px 10px 20px 10px;
     line-height: 1.8rem;
+    font-size: .9rem;
 }
 
-footer h5{
+footer .footer-copyright{
+    border-top: 1px solid #86868696;
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+footer li a, footer a{
+    color: #666;
+}
+footer .footer-copyright a{
     color: #c42127;
 }
-
-footer li a{
-    color: #232323;
-}
-
-
-
-
-
-
-
 
 /*NEWS*/
 #news{
@@ -797,48 +804,42 @@ footer li a{
 }
 
 /*END NEWS*/
+@media (min-width: 386px) {
+    .banner-main .main-image {
+        width: 100%;
+      }
+}
 
-
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .products-container{
         padding: 15px;
     }
     #products{
-        padding-bottom: 60px;
+        padding-bottom: 40px;
+        padding-top: 30px;
     }
-    .products-container .title{
-        margin-bottom: 40px;
+    #products .title{
+        font-size: 1.4rem;
     }
-    /*.banner-main .item h1 {
-        font-size: 3rem;
-        margin-top: 60px;
+    .slick-prev, 
+    .slick-next {
+        display: none;
     }
-    .banner-main .item h2 {
-        font-size: 1.8rem;
+    #que-te-ofrecemos { 
+        padding-top: 50px;
     }
-    .banner-main{
-        min-height: 100vh;
-        max-height: 100vh;
+    #que-te-ofrecemos .eqi-card__wrapper:nth-child(even) { margin-top: 0px; }
+    #que-te-ofrecemos .eqi-card {
+        height: 100%;
     }
-    .banner-main  .img-banner{
-        width: 300px;
-        height: 411px;
+    #news .news-container {
+        padding: 30px 15px;
     }
-    .banner-main .item .content {
-        padding-top: 380px;
-      }*/
-      #que-te-ofrecemos { 
-          padding-top: 50px;
-        }
-        #que-te-ofrecemos .eqi-card__wrapper:nth-child(even) { margin-top: 0px; }
-        #que-te-ofrecemos .eqi-card {
-            height: 100%;
-        }
-        #news .news-container {
-            padding: 30px 15px;
-        }
-        #news .col-lg-6{
-            margin-bottom: 30px;
-        }
+    #news .col-lg-6{
+        margin-bottom: 30px;
+    }
+    footer{
+        padding: 50px 0px 1px 0px;
+    }
    
   }
